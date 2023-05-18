@@ -1,0 +1,53 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_ability
+  - thankyou
+  - praise
+  - decry
+  - ask_for_lunch
+  - user_lie
+
+responses:
+  utter_greet:
+  - text: "Em chào anh(chị) ạ. \nEm là chatbot được thiết kế để giúp anh chị quyết\
+      \ định 'trưa nay ăn gì?' ạ"
+
+  utter_goodbye:
+  - text: "Hẹn gặp lại anh chị ạ ^^"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_fallback:
+  - text: "Em xin lỗi, em chưa hiểu ý muốn của anh(chị) ạ. Anh chị có thể nói lại được không ạ"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_rep_lie:
+    - text: "Xin hãy ăn nói có văn hoá"
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_fallback
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_iamabot
+  - utter_rep_lie
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

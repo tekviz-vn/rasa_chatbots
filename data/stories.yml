@@ -1,0 +1,30 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_ability
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: praise
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: user_lie
+  - action: utter_rep_lie
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: decry
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: thankyou
+  - action: utter_goodbye
